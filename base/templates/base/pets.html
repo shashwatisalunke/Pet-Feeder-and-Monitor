@@ -1,0 +1,65 @@
+{% load static %}
+{% static 'images' as baseURL %}
+
+<!-- pet section start  -->
+<div class="rela-block">
+    <div class="pets"><h1>My Pets</h1></div>
+    <div class="pets">
+        <form action="" method="get">
+            <button class="pet" id="dog" name="q" value="dog">Dog</button>
+            <button class="pet" id="cat" name="q" value="cat">Cat</button>
+            <button class="pet" id="rabbit" name="q" value="rabbit">Rabbit</button>
+            <button class="pet add-pet" name="q" value="add-pet">+</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .pets{
+        margin: 1% 1%;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    
+    .pet{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+    }
+
+    .pet:hover{
+        transform: scale(1.1);
+    }
+
+    .add-pet{
+        font-size: xx-large;
+    }
+    
+    .pet-active{
+        border: 5px solid rgb(211, 75, 75);
+    }
+</style>
+
+<script>
+    const pets = document.getElementsByClassName("pet");
+    for(let i=0; i<pets.length; i++){
+        const img = pets[i].attributes.value.nodeValue;
+        pets[i].style.backgroundImage = `url('{{baseURL}}/${img}.png')`;
+    }
+</script>
+
+{% if pet %}
+    <script>
+        document.getElementById("{{pet}}").classList.add("pet-active");
+    </script>
+{% endif %}
+
+<!-- pet section end  -->

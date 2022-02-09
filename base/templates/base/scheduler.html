@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block head %}
+  <title>PFAM | Scheduler</title>
+  <link rel="stylesheet" href="{% static 'css/scheduler.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+  <!-- heading start  -->
+  <div class="rela-block portfolio-top grad-back" id="topSection">
+    <h1 class="half-big-text has-border">Scheduler</h1>
+  </div>
+  <!-- heading end  -->
+
+  {% include 'base/pets.html' %}
+
+  <!-- scheduler start  -->
+
+  <!-- scheduler end  -->
+
+{% endblock content %}

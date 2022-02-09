@@ -1,0 +1,101 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block head %}
+    <title>PFAM | Our Product</title>
+{% endblock head %}
+
+{% block content %}
+    <!-- heading start  -->
+    <div class="rela-block portfolio-top grad-back" id="topSection">
+        <h1 class="half-big-text has-border">Our Product</h1>
+    </div>
+    <!-- heading end  -->
+
+    <!-- block start  -->
+    <div class="rela-block portfolio-second" style="justify-content: center; background-color: #fff">
+        <div class="has-lines white">Automatic</div>
+        <div class="has-lines white">Fast</div>
+        <div class="has-lines white">User-friendly</div>
+        <div class="has-lines white">Cost-efficient</div>
+        <div class="has-lines white">Time-saving</div>
+    </div>
+    <!-- block end  -->
+    
+    <!-- block start  -->
+    <div class="rela-block team-section" id="teamSection">
+        <h1 class="half-big-text has-border">OUR GOAL</h1>
+        <p>To minimize labor cost and efforts to feed every single animal, every single time, and help to save time</p>
+        <div class="orbitron black-orb">\\\///</div>
+    </div>
+    <!-- block end  -->
+
+    <!-- block start  -->
+    <div class="rela-block clients-section">
+        <div class="floated left client-part">
+            <div class="abs-cent-text">
+                <h2 class="half-big-text has-border">Clients</h2>
+            </div>
+        </div>
+        <div class="floated left client-part"></div>
+        <div class="floated left client-part"></div>
+        <div class="floated left client-part"></div>
+    </div>
+
+    <div class="rela-block services-section" id="servicesSection">
+        <div class="rela-block service-row">
+            <div class="floated left service-row-half grey-back">
+                <div class="abs-cent-text"></div>
+            </div>
+            <div class="floated right service-row-half">
+                <div class="abs-cent-text">
+                    <h2 class="small-header">Households</h2>
+                    <div class="orbitron black-orb">\\\///</div>
+                    <p>Used in houses where people have hectic schedule,doesn't have time to feed their pet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rela-block service-row">
+            <div class="floated right service-row-half black-back">
+                <div class="abs-cent-text wordpress"></div>
+            </div>
+            <div class="floated left service-row-half">
+                <div class="abs-cent-text">
+                    <h2 class="small-header">Pet Shops</h2>
+                    <div class="orbitron black-orb">\\\///</div>
+                    <p>Used in pet shops where needed to feed many dogs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rela-block service-row">
+            <div class="floated left service-row-half" id="picpic">
+                <div class="abs-cent-text weird-one"></div>
+            </div>
+            <div class="floated right service-row-half">
+                <div class="abs-cent-text">
+                    <h2 class="small-header">Municipality (Animal Shelter)</h2>
+                    <div class="orbitron black-orb">\\\///</div>
+                    <p>It can be also used to feed animals picked up by Municipal corporation where in feeding has to be done on a large number.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rela-block service-row">
+            <div class="floated right service-row-half black-back">
+                <div class="abs-cent-text star"></div>
+            </div>
+            <div class="floated left service-row-half">
+                <div class="abs-cent-text">
+                    <h2 class="small-header">Animal Pounds</h2>
+                    <div class="orbitron black-orb">\\\///</div>
+                    <p>Can be used to feed cats and dogs present in pounds.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- block end  -->
+
+    {% include 'base/footer.html' %}
+{% endblock content %}

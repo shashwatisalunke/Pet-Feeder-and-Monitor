@@ -1,0 +1,92 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block head %}
+  <title>PFAM | Login</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <!-- heading start -->
+    <div class="rela-block portfolio-top grad-back">
+        <h1 class="half-big-text has-border">Login / Sign up</h1>
+    </div>
+    <!-- heading end  -->
+
+    <br>
+    {% for msg in messages %}
+      <h2 class="message">{{msg}}</h2>
+      <style>
+        .message{
+          color: red;
+          text-align: center;
+          font-weight: bolder;
+        }
+      </style>
+    {% endfor %}
+    <br>
+
+    <!-- form start  -->
+    <div class="cont">
+      <div class="form sign-in">
+        <br><br>
+        <h2>Welcome back,</h2>
+        <br><br>
+        <form action="" method="post">
+          {% csrf_token %}
+          <label><span>Email</span></label>
+          <input type="email" name="login_email" required />
+          <label><span>Password</span></label>
+          <input type="password" name="login_password" required />
+          <a href="{% url 'reset-password' %}"><p class="forgot-pass">Forgot password?</p></a>
+          <button type="submit" name="signIn" value="signIn" class="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div class="sub-cont">
+        <div class="img">
+          <div class="img__text m--up">
+            <h2>New here?</h2>
+            <p>Sign up to know more and buy our product!</p>
+          </div>
+          <div class="img__text m--in">
+            <h2>One of us?</h2>
+            <p>If you already has an account, just sign in. We've missed you!</p>
+          </div>
+          <div class="img__btn">
+            <span class="m--up">Sign Up</span>
+            <span class="m--in">Sign In</span>
+          </div>
+        </div>
+        <div class="form sign-up">
+          <h2>Time to feel like home,</h2>
+          <form action="" method="post">
+            {% csrf_token %}
+            <label><span>Full Name</span></label>
+            <input type="text" name="name" required />
+            <label><span>Username</span></label>
+            <input type="text" name="username" required />
+            <label><span>Email</span></label>
+            <input type="email" name="email" required />
+            <label><span>Password</span></label>
+            <input type="password" name="password1" required />
+            <label><span>Confirm Password</span></label>
+            <input type="password" name="password2" required />
+            <button type="submit" name="signUp" value="signUp" class="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- form end  -->
+
+    <script> 
+      document.querySelector('.img__btn').addEventListener('click', function() {
+        document.querySelector('.cont').classList.toggle('s--signup');
+      });
+    </script>
+    {% for msg in messages %}
+      {% if msg.tags == "error" %}
+        <script>document.body.getElementsByClassName("cont")[0].classList.add("s--signup")</script>  
+      {% endif %}
+    {% endfor %}
+{% endblock content %}

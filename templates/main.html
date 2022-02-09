@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" type="image/png" href="{% static 'images/icon.png' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.png' %}" />
+    <link rel="mask-icon" type="image/x-icon" href="{% static 'images/icon.png' %}" color="#111" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block head %}
+        <title>PFAM</title>
+    {% endblock head %}
+    <script>
+        window.console = window.console || function(t) {};
+        if (document.location.search.match(/type=embed/gi)) window.parent.postMessage("resize", "*");
+    </script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    {% block content %}{% endblock content %}
+
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

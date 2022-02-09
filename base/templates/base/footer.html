@@ -1,0 +1,22 @@
+<div class="rela-block footer-section">
+    <h2 class="small-header top-link">Back to Top</h2>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'about-us' %}" class="foo_nav">About Us</a>
+        <a href="{% url 'contact' %}" class="foo_nav">Contact Us</a>
+        <style>
+            .foo_nav{
+                display: inline-block;
+                color: black;
+                font-weight: 600;
+                margin: 1% 2%;
+            }
+        </style>
+    {% endif %}
+    <div class="rela-block social-buttons-container">
+        <div class="social-button facebook-button"></div>
+        <div class="social-button twitter-button"></div>
+        <div class="social-button instagram-button"></div>
+        <div class="social-button behance-button"></div>
+    </div>
+    <p>Classic deluxe custom designer luxury prestige high-quality premium select gourmet pocket pencil sharpener.<br>Yours for the asking, no purchase necessary. It's our way of saying thank you.</p>
+</div>

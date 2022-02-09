@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block head %}
+    <title>PFAM | Contact Us</title>
+{% endblock head %}
+{% block content %}
+    <!-- heading start  -->
+    <div class="rela-block portfolio-top grad-back" id="topSection">
+        <h1 class="half-big-text has-border">Contact Us</h1>
+    </div>
+    <!-- heading end  -->
+        
+    <!-- block start  -->
+    <div class="rela-block contact-section" id="contactSection">
+        <p>Ask us anything and we will help you find the answers.Response time:within 24 hours</p>
+        <div class="orbitron black-orb">\\\///</div>
+        <div class="rela-block contact-form-container">
+            <div class="contact-half contact-left">
+                <h2 class="small-header">Don't hesitate to contact us.</h2>
+                <p>Email us with any questions or enquiry call on +91 8733452343 We would be happy to answer your questions and setup a meeting. We can help set you apart from flocks</p>
+                <div class="rela-block left-quad-container">
+                    <div class="contact-quad">JNEC Aurangabad Cidco<br>Maharashtra<br>PIN CODE  431003</div>
+                    <div class="contact-quad">+91 8733452343<br>+91 8733452453</div>
+                    <div class="contact-quad"><br>pets@gmail.com</div>
+                    <div class="contact-quad">M-F: 8 AM - 3 PM<br>Sa: 8AM - 12PM<br>Su: Closed</div>
+                </div>
+                <div class="social-button facebook-button"></div>
+                <div class="social-button twitter-button"></div>
+                <div class="social-button instagram-button"></div>
+            </div>
+            
+            <div class="contact-half contact-right">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input type="text" id="name" name="name" placeholder="ENTER YOU NAME" class="contact-input" required />
+                    <input type="email" id="email" name="email" placeholder="ENTER YOUR EMAIL" class="contact-input" required />
+                    <input type="text" id="number" name="number" placeholder="PHONE NUMBER" class="contact-input" required />
+                    <textarea cols="40" id="message" name="message" rows="5" placeholder="ENTER YOUR MESSAGE" class="contact-input big-input" style="resize: none;" required ></textarea>
+                    <button class="small-header submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- block end  -->
+    
+    {% include 'base/footer.html' %}
+{% endblock content %}

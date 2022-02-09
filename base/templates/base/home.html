@@ -1,0 +1,116 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block head %}
+    <title>PFAM | Home</title>
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+{% endblock head %}
+{% block content %}
+    <!-- top section start  -->
+    <div class="rela-block top-section grad-back" id="topSection">
+        <div class="abs-cent-text top-text">
+            <h1 class="big-text">Feed Me!</h1>
+            <div class="orbitron top-orb">\\\///</div>
+            <p class="top-small-text">Worried about feeding? Ooops! Forgot specific diet schedules? No worries,we have a solution for you, so just go on and buy our automated product to feed them!</p>
+        </div>
+    </div>
+    <!-- top section end  -->
+
+    <!-- card section start  -->
+    <div class="rela-block under-top-section">
+        <div class="half-big-text under-top-big-text" style="text-align: center; margin-left:0;">Feeder and Monitor</div>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">WHAT</h2>
+                    <p class="copy">The enitre feeding data is recorded and visible on the page</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">WHO</h2>
+                    <p class="copy">Anyone can use this product:Pet shop owners and even pound owners, no skills required.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">HOW</h2>
+                    <p class="copy">Programmed to dispense specified amount and algorithms arE used to get insights</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <h2 class="title">WOW!</h2>
+                    <p class="copy">Completely automated, easy to use,user-friendly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card section end  -->
+
+    <!-- our product start  -->
+    <div class="rela-block welcome-section">
+        <div class="abs-cent-text welcome-text">
+            <h1 class="big-text">Our Product</h1>
+            <div class="orbitron black-orb">\\\///</div>
+            <p>Feed the pets using our product, keep a check on everything from anywhere and be updated with their feeding pattern and know the details.</p>
+            <a class="has-lines black" href="{% url 'our-product' %}" style="cursor: pointer;">Explore</a>
+        </div>
+    </div>
+    <!-- our product end  -->
+
+    <!-- section start  -->
+    <div class="rela-block portfolio-second">
+        <div class="homepage-text">
+            <h1 class="homepage-text-heading" role="heading">One Size Does Not Fit All</h1>
+            <p> 
+                Every animal is different, each one has their own distinct personality and nutritional needs. 
+                Every owner wants to know which food is best for their aniamal based on their age, breed, activity level and health,and much more.
+            </p>
+            <div class="filson">
+                <p> 
+                    <strong>It can be overwhelming with too many choices. We make it simple.</strong>
+                </p>
+            </div>
+        </div>
+        <div class="homepage-image-container">
+            <img class="homepage-image-container-img" src="{% static 'images/Homepage-Dogs.png' %}" alt="pic">
+        </div>
+    </div>
+    <!-- section end  -->
+
+    <!-- carousel start  -->
+    <div class="rela-block profile-view-container">
+        <div class="arrow left"></div>
+        <div class="profile-image"></div>
+        <div class="profile-content">
+            <h2 class="half-big-text" style="margin-left: 0%;">Presenting the all new</h2>
+            <h3 class="small-header">Food Monitoring</h3>
+            <p>Amount of dispensed food every time and current amount present in the bowl is recorded, additionally, all further schedules meals are available.</p>
+            <div class="lines-thing black"></div>
+        </div>
+        <div class="arrow right"></div>
+    </div>
+    <!-- carousel end  -->
+
+    <!-- know more start  -->
+    <div class="rela-block testimonials-section">
+        <div class="floated left test-left">
+            <div class="abs-cent-text">
+                <h2 class="half-big-text has-border">Know more</h2>
+            </div>
+        </div>
+        <div class="floated left test-right">
+            <div class="abs-cent-text">
+                <p class="space">"The Commercial Automated Pet Feeder is an IOT based project which does the basic functioning of any pet feeder in the market, i.e. dispensing at timely intervals and additionally uses sensor technology to collect relevant data and in turn generate appropriate insights about the animals eating habits. Also, the project will be pre-programmed with inbuilt instructional codes which will include the food type of animal breed associated with the gender intake. Hence, considering all the aspects and then associating the program that will be responsible for each cell in the pound or shop, the user will just have to update the project with the cell numbers and the type of animal kept in the respective cell. This way, the functioning will begin accordingly and automatic dispensing at defined time intervals will occur"</p>
+                <h2 class="small-header">Introduction</h2>
+                <p><em>Short brief</em></p>
+            </div>
+        </div>
+    </div>
+    <!-- know more end  -->
+    
+    {% include 'base/footer.html' %}
+{% endblock content %}
